@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: chatbot-rag
+    env: python
+    buildCommand: pip install poetry && poetry config virtualenvs.create false && poetry install --no-dev
+    startCommand: sh start.sh
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0

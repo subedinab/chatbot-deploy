@@ -1,7 +1,9 @@
 import streamlit as st
 import requests
+import os
 
-API_URL = "http://localhost:8000/chat"  # Change to your FastAPI server's endpoint
+# Get the API URL from environment variable or use default
+API_URL = os.getenv("API_URL", "http://localhost:8000/chat")
 
 st.title(" 🍁 RAG-Chatbot 🍁 ")
 
